@@ -1,4 +1,10 @@
-import collections
+from collections import Counter
 
-vertices = [1,2,3,4,5,6,6]
-print(all(count == 1 for count in collections.Counter(vertices).values()))
+data = [ 31, 41, 59, 26, 53, 58, 97, 93, 23, 84, 62, 64, 33, 83, 27, 95,  2, 88, 41, 97,
+            16, 93, 99, 37, 51,  5, 82,  9, 74, 94, 45, 92, 30, 78, 16, 40, 62, 86, 20, 89,
+            98, 62, 80, 34, 82, 53, 42, 11, 70, 67, 98, 21, 48,  8, 65, 13, 28, 23,  6, 64,
+            70, 93, 84, 46,  9, 55,  5, 82, 23, 17, 53, 59, 40, 81, 28, 48, 11, 17, 45,  2,]
+
+counter = Counter(int(str(number)[0]) for number in data if 0 <= int(str(number)[0]) <= 9)
+
+for i in counter.values()

@@ -11,7 +11,7 @@ class BiDict(Generic[K, V]):
             raise KeyError
     
     def __setitem__(self, k: K, v: V):
-        pass
+        self.b.add
     def __len__(self):
         return len(self.b)
     def __pop__(self, k: K):

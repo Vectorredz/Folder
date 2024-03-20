@@ -1,19 +1,12 @@
 from collections import Counter
 from pytest import raises
-from typing import Sequence
+from cs12232prac05b import first_digits
 
-def first_digits(data: Sequence[int]) -> Counter[int]:
-    #check if d follows the formula
-    for i in data:
-        if not i < 0:
-            counter = Counter(int(str(number)[0]) for number in data if 0 <= int(str(number)[0]) <= 9)
-            return counter
-        else:
-            raise ValueError
 
 def test_first_digits_invalid():
     with raises(ValueError):
         first_digits((1, 1, -1, 1, 1))
+
 
 def test_first_digits_valid():
     assert first_digits((0, 12, 34, 0)) == Counter[int]((0, 1, 3, 0))
