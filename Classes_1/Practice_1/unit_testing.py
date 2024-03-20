@@ -1,4 +1,4 @@
-from cs12232prac03a import MinReadyArray
+from Classes_1.Practice_1.cs12232prac03a import MinReadyArray
 
 # make two instances
 arr1 = MinReadyArray()
