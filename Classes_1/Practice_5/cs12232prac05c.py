@@ -1,5 +1,7 @@
 from collections import Counter
-from typing import Sequence
+from typing import Sequence , TypeVar
+
+T = TypeVar("T")
 
 def generate_histogram(data: Sequence[int]):
     for i in data:
@@ -11,7 +13,7 @@ def generate_histogram(data: Sequence[int]):
 
     cmax = max(counts)
 
-    histogram = []
+    histogram: list[str | None] = []
     for i in range(20, -1, -1):
         row = []
         for j in range(10):
